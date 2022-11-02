@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>octFDForm</class>
+ <widget class="QWidget" name="octFDForm">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>477</width>
+    <height>426</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>OCT Feature Detection</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>76</y>
+     <width>193</width>
+     <height>69</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Sample center</string>
+   </property>
+   <widget class="QPushButton" name="calculateBtn">
+    <property name="geometry">
+     <rect>
+      <x>88</x>
+      <y>17</y>
+      <width>101</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Calculate</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="centerX">
+    <property name="geometry">
+     <rect>
+      <x>28</x>
+      <y>18</y>
+      <width>53</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>20</y>
+      <width>17</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>X</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="centerZ">
+    <property name="geometry">
+     <rect>
+      <x>28</x>
+      <y>42</y>
+      <width>53</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>42</y>
+      <width>17</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Z</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>4</x>
+     <y>0</y>
+     <width>469</width>
+     <height>73</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>B-Scan settings</string>
+   </property>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>19</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Source</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="bScanPath">
+    <property name="geometry">
+     <rect>
+      <x>52</x>
+      <y>18</y>
+      <width>233</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="selectBscan">
+    <property name="geometry">
+     <rect>
+      <x>288</x>
+      <y>17</y>
+      <width>29</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="baseRI">
+    <property name="geometry">
+     <rect>
+      <x>52</x>
+      <y>42</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>1.42</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>44</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Base RI</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>96</x>
+      <y>44</y>
+      <width>85</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Scanning area X</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="XSizemm">
+    <property name="geometry">
+     <rect>
+      <x>176</x>
+      <y>42</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ZSizemm">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>42</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>209</x>
+      <y>44</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>mm</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>273</x>
+      <y>44</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>mm</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>232</x>
+      <y>44</y>
+      <width>17</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Z</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="loadBtn">
+    <property name="geometry">
+     <rect>
+      <x>327</x>
+      <y>16</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Load</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="angleDirection">
+    <property name="geometry">
+     <rect>
+      <x>352</x>
+      <y>42</y>
+      <width>49</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>CV</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>CCV</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>308</x>
+      <y>44</y>
+      <width>45</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Rotation</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_3">
+   <property name="geometry">
+    <rect>
+     <x>4</x>
+     <y>76</y>
+     <width>269</width>
+     <height>69</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Detection settings</string>
+   </property>
+   <widget class="QLineEdit" name="activeArea">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>44</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>100</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="detectionMethods">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>16</y>
+      <width>85</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>46</y>
+      <width>65</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Max distance</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>152</x>
+      <y>46</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Active area, %</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>18</y>
+      <width>89</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Detection method</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="detect">
+    <property name="geometry">
+     <rect>
+      <x>188</x>
+      <y>14</y>
+      <width>75</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Detect</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="maxDist">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>44</y>
+      <width>33</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>50</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="featureViewPanel">
+   <property name="geometry">
+    <rect>
+     <x>4</x>
+     <y>148</y>
+     <width>469</width>
+     <height>273</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Detected feature review</string>
+   </property>
+   <widget class="QGraphicsView" name="fdResultPreview">
+    <property name="geometry">
+     <rect>
+      <x>4</x>
+      <y>48</y>
+      <width>461</width>
+      <height>217</height>
+     </rect>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>21</y>
+      <width>57</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>B-Scans pair</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="scanPairs">
+    <property name="geometry">
+     <rect>
+      <x>76</x>
+      <y>20</y>
+      <width>161</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="enableAllBtn">
+    <property name="geometry">
+     <rect>
+      <x>252</x>
+      <y>20</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Enable all</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="disableAllBtn">
+    <property name="geometry">
+     <rect>
+      <x>332</x>
+      <y>20</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Disable all</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

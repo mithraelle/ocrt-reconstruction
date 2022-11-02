@@ -1,0 +1,1142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ocrtRIForm</class>
+ <widget class="QWidget" name="ocrtRIForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1064</width>
+    <height>737</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>OCT Malewitsch</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../favicon-16x16.png</normaloff>../favicon-16x16.png</iconset>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>4</x>
+     <y>4</y>
+     <width>225</width>
+     <height>73</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>RI Map</string>
+   </property>
+   <widget class="QToolButton" name="openRIFile">
+    <property name="geometry">
+     <rect>
+      <x>192</x>
+      <y>45</y>
+      <width>25</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="sourceType">
+    <property name="geometry">
+     <rect>
+      <x>48</x>
+      <y>16</y>
+      <width>169</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>B-Scans</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>File</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Embedded: lens</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Embeded: capillary</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Embeded: medium</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLineEdit" name="riFile">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>44</y>
+      <width>177</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>16</y>
+      <width>41</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Source</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>232</x>
+     <y>4</y>
+     <width>217</width>
+     <height>73</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Parametrisation</string>
+   </property>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>142</x>
+      <y>16</y>
+      <width>33</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sigma</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="sigmaEdit">
+    <property name="geometry">
+     <rect>
+      <x>176</x>
+      <y>16</y>
+      <width>25</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>1.5</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="nodesEdit">
+    <property name="geometry">
+     <rect>
+      <x>176</x>
+      <y>40</y>
+      <width>25</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>2</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>142</x>
+      <y>40</y>
+      <width>33</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Nodes</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="XStepEdit">
+    <property name="geometry">
+     <rect>
+      <x>96</x>
+      <y>16</y>
+      <width>36</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>4</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>16</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>RI nodes Step</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ZStepEdit">
+    <property name="geometry">
+     <rect>
+      <x>96</x>
+      <y>40</y>
+      <width>36</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>1</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>40</y>
+      <width>89</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Propagation Step</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>4</x>
+     <y>80</y>
+     <width>1056</width>
+     <height>651</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>2</number>
+   </property>
+   <widget class="QWidget" name="tabOverview">
+    <attribute name="title">
+     <string>RI Overview</string>
+    </attribute>
+    <widget class="QGroupBox" name="groupBox_4">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>32</y>
+       <width>522</width>
+       <height>593</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Overview</string>
+     </property>
+     <widget class="QGraphicsView" name="RIPreview">
+      <property name="geometry">
+       <rect>
+        <x>4</x>
+        <y>12</y>
+        <width>514</width>
+        <height>575</height>
+       </rect>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_5">
+     <property name="geometry">
+      <rect>
+       <x>528</x>
+       <y>32</y>
+       <width>520</width>
+       <height>528</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Sample B-Scan</string>
+     </property>
+     <widget class="QLabel" name="bscanPreview">
+      <property name="geometry">
+       <rect>
+        <x>4</x>
+        <y>12</y>
+        <width>512</width>
+        <height>512</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>Preview</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="label_17">
+     <property name="geometry">
+      <rect>
+       <x>8</x>
+       <y>8</y>
+       <width>47</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>View</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="previewMode">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>8</y>
+       <width>57</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>N</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>dN/dz</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>dN/dx</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QCheckBox" name="raysShow">
+     <property name="geometry">
+      <rect>
+       <x>112</x>
+       <y>8</y>
+       <width>137</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Show rays</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_18">
+     <property name="geometry">
+      <rect>
+       <x>688</x>
+       <y>8</y>
+       <width>47</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Angle</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="angleList">
+     <property name="geometry">
+      <rect>
+       <x>720</x>
+       <y>8</y>
+       <width>65</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="originalTraceHide">
+     <property name="geometry">
+      <rect>
+       <x>192</x>
+       <y>8</y>
+       <width>121</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Hide original traces</string>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="BScanBase">
+     <property name="geometry">
+      <rect>
+       <x>832</x>
+       <y>8</y>
+       <width>89</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>dN/dz</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>RI map source</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Dots Rectangle</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Dots Square</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>792</x>
+       <y>8</y>
+       <width>33</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Sample</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>328</x>
+       <y>8</y>
+       <width>41</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Rays</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="rays">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>8</y>
+       <width>33</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>7</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="antialiasingBScan">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>8</y>
+       <width>81</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Antialiasing</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="saveRIBtn">
+     <property name="geometry">
+      <rect>
+       <x>408</x>
+       <y>5</y>
+       <width>113</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Save RI overview</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="saveBScanSampleBtn">
+     <property name="geometry">
+      <rect>
+       <x>936</x>
+       <y>7</y>
+       <width>113</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Save B-Scan Sample</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tabGen">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <attribute name="title">
+     <string>RI Generation</string>
+    </attribute>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>5</y>
+       <width>41</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Epsilon:</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="genStep">
+     <property name="geometry">
+      <rect>
+       <x>408</x>
+       <y>5</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Step</string>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="geometry">
+      <rect>
+       <x>528</x>
+       <y>32</y>
+       <width>520</width>
+       <height>528</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Error Map</string>
+     </property>
+     <widget class="QLabel" name="RIErrorPreview">
+      <property name="geometry">
+       <rect>
+        <x>8</x>
+        <y>12</y>
+        <width>512</width>
+        <height>512</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Error Preview</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>8</x>
+       <y>5</y>
+       <width>41</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Alpha:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>224</x>
+       <y>5</y>
+       <width>41</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Steps:</string>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_9">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>32</y>
+       <width>522</width>
+       <height>593</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>RI Map</string>
+     </property>
+     <widget class="QGraphicsView" name="RIGenView">
+      <property name="geometry">
+       <rect>
+        <x>4</x>
+        <y>12</y>
+        <width>514</width>
+        <height>575</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLineEdit" name="eps">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>5</y>
+       <width>57</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0.001</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="alpha">
+     <property name="geometry">
+      <rect>
+       <x>48</x>
+       <y>5</y>
+       <width>57</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0.01</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="stepsCount">
+     <property name="geometry">
+      <rect>
+       <x>264</x>
+       <y>5</y>
+       <width>57</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>10</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pickRI">
+     <property name="geometry">
+      <rect>
+       <x>488</x>
+       <y>5</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Pick RI</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="genRun">
+     <property name="geometry">
+      <rect>
+       <x>328</x>
+       <y>5</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Run</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tabReconstruct">
+    <attribute name="title">
+     <string>B-Scan reconstruction</string>
+    </attribute>
+    <widget class="QGroupBox" name="groupBox_7">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>32</y>
+       <width>520</width>
+       <height>528</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Original B-Scan</string>
+     </property>
+     <widget class="QLabel" name="bscanSource">
+      <property name="geometry">
+       <rect>
+        <x>4</x>
+        <y>12</y>
+        <width>512</width>
+        <height>512</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>Preview</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_8">
+     <property name="geometry">
+      <rect>
+       <x>530</x>
+       <y>32</y>
+       <width>520</width>
+       <height>528</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Reconstructed Sample</string>
+     </property>
+     <widget class="QLabel" name="samplePreview">
+      <property name="geometry">
+       <rect>
+        <x>4</x>
+        <y>12</y>
+        <width>512</width>
+        <height>512</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>Preview</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QCheckBox" name="antialiasingReconstruction">
+     <property name="geometry">
+      <rect>
+       <x>536</x>
+       <y>8</y>
+       <width>81</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Antialiasing</string>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="openBScans">
+     <property name="geometry">
+      <rect>
+       <x>268</x>
+       <y>8</y>
+       <width>25</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>...</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="BScansPath">
+     <property name="geometry">
+      <rect>
+       <x>84</x>
+       <y>7</y>
+       <width>177</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="BScansAngle">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>7</y>
+       <width>81</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="saveSampleBtn">
+     <property name="geometry">
+      <rect>
+       <x>912</x>
+       <y>8</y>
+       <width>129</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Save Reconstruction</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="mergeResults">
+     <property name="geometry">
+      <rect>
+       <x>704</x>
+       <y>8</y>
+       <width>57</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Merge</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="showHeatmap">
+     <property name="geometry">
+      <rect>
+       <x>624</x>
+       <y>8</y>
+       <width>81</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Heatmap</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_23">
+     <property name="geometry">
+      <rect>
+       <x>8</x>
+       <y>5</y>
+       <width>71</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>B-Scan source:</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_6">
+   <property name="geometry">
+    <rect>
+     <x>456</x>
+     <y>4</y>
+     <width>481</width>
+     <height>73</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Sample Settings</string>
+   </property>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>16</y>
+      <width>47</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Center X</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="XCenterEdit">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>56</x>
+      <y>16</y>
+      <width>49</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ZCenterEdit">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>56</x>
+      <y>40</y>
+      <width>49</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>40</y>
+      <width>47</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Center Z</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_15">
+    <property name="geometry">
+     <rect>
+      <x>112</x>
+      <y>16</y>
+      <width>47</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>px</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_16">
+    <property name="geometry">
+     <rect>
+      <x>112</x>
+      <y>40</y>
+      <width>47</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>px</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="angleCount">
+    <property name="geometry">
+     <rect>
+      <x>384</x>
+      <y>16</y>
+      <width>33</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>342</x>
+      <y>16</y>
+      <width>33</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Angles</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>342</x>
+      <y>40</y>
+      <width>41</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Base RI</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="baseRI">
+    <property name="geometry">
+     <rect>
+      <x>384</x>
+      <y>40</y>
+      <width>33</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>1</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="angleDirection">
+    <property name="geometry">
+     <rect>
+      <x>424</x>
+      <y>16</y>
+      <width>49</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>CV</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>CCV</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLineEdit" name="ZSizemm">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>176</x>
+      <y>40</y>
+      <width>49</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>2</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="XSizemm">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>176</x>
+      <y>16</y>
+      <width>49</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>2</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_19">
+    <property name="geometry">
+     <rect>
+      <x>136</x>
+      <y>40</y>
+      <width>33</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Height</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_20">
+    <property name="geometry">
+     <rect>
+      <x>232</x>
+      <y>40</y>
+      <width>47</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>mm</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_21">
+    <property name="geometry">
+     <rect>
+      <x>232</x>
+      <y>16</y>
+      <width>47</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>mm</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_22">
+    <property name="geometry">
+     <rect>
+      <x>136</x>
+      <y>16</y>
+      <width>33</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Width</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="makeRIbtn">
+   <property name="geometry">
+    <rect>
+     <x>944</x>
+     <y>8</y>
+     <width>113</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Generate</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="resetRIbtn">
+   <property name="geometry">
+    <rect>
+     <x>944</x>
+     <y>44</y>
+     <width>113</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Reset</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
